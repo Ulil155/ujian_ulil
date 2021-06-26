@@ -32,8 +32,8 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-book-reader"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Ujian Online</div>
             </a>
@@ -44,23 +44,23 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url("/") }}">
-                    <span>Dashboard</span></a>
+                    <i class="fas fa-home"></i> <span>Dashboard</span></a>
             </li>
 
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route("ujian") }}">
-                    <span>Ujian</span>
+                    <i class="far fa-newspaper"></i> <span>Ujian</span>
                 </a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
+            {{-- <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+            </div> --}}
 
         </ul>
         <!-- End of Sidebar -->
@@ -80,8 +80,8 @@
                     </button>
 
                     <h2 class="container-fluid-nav text-center" href="index.html">
-                
-                <div class="navbar-brand-text mx-3">UJIAN PRAKTIKUM PTW</div>
+
+                    <div class="text-lg font-weight-bold text-uppercase">UJIAN PRAKTIKUM PTW</div>
             </h2>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -94,7 +94,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="img/undraw_profile_2.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -156,25 +156,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src=" {{ asset("vendor/jquery/jquery.min.js") }}"></script>
